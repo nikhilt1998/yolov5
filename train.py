@@ -546,7 +546,7 @@ def main(opt, callbacks=Callbacks()):
         if opt.name == 'cfg':
             opt.name = Path(opt.cfg).stem  # use model.yaml as name
         detection_type = opt.data.split('/')[-3]
-        opt.save_dir = 'yolov5/runs/train/{}_weights'.format(detection_type) # str(increment_path(Path(opt.project) / opt.name, exist_ok=opt.exist_ok))
+        opt.save_dir = 'yolov5/runs/train/{}'.format(detection_type) # str(increment_path(Path(opt.project) / opt.name, exist_ok=opt.exist_ok))
         print('opt data save_dir', opt.data.split('/')[-3], opt.save_dir)
 
     # DDP mode
